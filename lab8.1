@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char symbols[] = {'+','-','/','=','+','+','-','*','+','\0'};//Набір символів
+	int N = strlen(symbols);//Визначається довжина масиву "symbols" і присвоюється до N
+	int count = 0;//Змінна для кількості +
+    char search[] = "+";
+	for (int i = 0; i < N; i++)
+	{
+		if (search[0] == symbols[i])//Порівнюються + та і-тий символ
+		{
+			count++;
+		}
+	}
+	if (count==0)//Для виводу що немає символу +
+	{
+		cout << "There are no '+' symbols";
+	}
+	else
+	{
+		cout << "There are " << count << " symbols of '+'";
+	}
+}
