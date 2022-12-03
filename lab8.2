@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main()
+{
+#pragma warning(disable : 4996)
+    char symbols[] = "Messi, better than Ronaldo!";
+    cout << symbols << "\n";
+    const char sep[] = ".,! ";
+    char* res = strtok(symbols, sep);
+    int lenght = strlen(res);
+    cout << res[lenght - 1];
+    for (int i = 0; i < 3; i++)
+    {
+        res = strtok(NULL, sep);
+        int lenght = strlen(res);
+        cout << res[lenght - 1];
+    }
+}
